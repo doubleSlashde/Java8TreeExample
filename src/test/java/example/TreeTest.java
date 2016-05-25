@@ -138,6 +138,7 @@ public class TreeTest {
         System.out.println("\nall values in the tree:");
         flattenedStream(tree).map(ExampleData::getName).forEach(System.out::println);
 
+        // asserting the sum of all num attributes
         assertEquals(new BigDecimal("1844"),
                 calculateSum(
                         flattenedStream(tree)
