@@ -4,9 +4,9 @@ import java.util.List;
 
 public class TreeNode<T> {
 
-    T data;
-    TreeNode<T> parent;
-    List<TreeNode<T>> children;
+    private T data;
+    private TreeNode<T> parent;
+    private List<TreeNode<T>> children;
     
     public List<TreeNode<T>> getChildren() {
         return children;
