@@ -134,6 +134,7 @@ public class TreeTest {
                         .peek(printName()) //
                         .count());
 
+        // Flattened tree using streams and recursion
         System.out.println("\nall values in the tree:");
         flattenedStream(tree).map(ExampleData::getName).forEach(System.out::println);
 
@@ -150,7 +151,13 @@ public class TreeTest {
     }
 
     private Stream<ExampleData> flattenedStream(TreeNode<ExampleData> tree) {
-        return new ExtendedTreeNode<ExampleData>(tree).flattened().map(TreeNode::getData);
+        return
+        // extending tree node by flatten functionality
+        new ExtendedTreeNode<ExampleData>(tree)
+                // flatten
+                .flattened()
+                // extract data from node
+                .map(TreeNode::getData);
     }
 
     private Consumer<? super TreeNode<ExampleData>> printName() {
