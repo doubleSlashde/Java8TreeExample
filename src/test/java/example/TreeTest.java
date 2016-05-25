@@ -16,7 +16,7 @@ import org.junit.Test;
 
 import example.genericJ8.ExtendedTreeNode;
 import example.genericJ8.TreePathUtil;
-import example.genericJ8.TreeUtil_2_GenericJava8;
+import example.genericJ8.TreeUtilGenericJava8;
 import example.simple.TreeUtilSimple;
 
 public class TreeTest {
@@ -63,16 +63,16 @@ public class TreeTest {
         System.out.println("------------------------------------------------");
 
         // output tree using name attribute
-        System.out.println(TreeUtil_2_GenericJava8.printTree(tree, d -> String.valueOf(d.getData().getName()) + "\n"));
+        System.out.println(TreeUtilGenericJava8.printTree(tree, d -> String.valueOf(d.getData().getName()) + "\n"));
 
         // output tree using num attribute
-        System.out.println(TreeUtil_2_GenericJava8.printTree(tree, d -> String.valueOf(d.getData().getNum()) + "\n"));
+        System.out.println(TreeUtilGenericJava8.printTree(tree, d -> String.valueOf(d.getData().getNum()) + "\n"));
 
         System.out.println("------------------------------------------------");
         System.out.println("-- advanced version with tree path");
         System.out.println("------------------------------------------------");
 
-        System.out.println(TreeUtil_2_GenericJava8.printTree(tree,
+        System.out.println(TreeUtilGenericJava8.printTree(tree,
                 d -> rightPad(d.getData().getName(), 20) //
                         + rightPad(String.valueOf(d.getData().getNum()), 20) //
                         + rightPad(String.valueOf(d.getData().getFoo()), 20) //
